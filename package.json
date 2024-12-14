@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@theme-toggles/react": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
     "react-router-dom": "^7.0.0",
     "react-router-redux": "^4.0.8",
+    "react-scroll": "^1.9.0",
     "redux-router": "^2.1.2"
   },
   "devDependencies": {
