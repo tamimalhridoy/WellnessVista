@@ -1,7 +1,7 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { Children, createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
-const DarkLight = () => {
+const DarkLight = ({ Children }) => {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
@@ -16,7 +16,11 @@ const DarkLight = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
-  return <div>DarkLight</div>;
+  return (
+    <ThemeContext.Provider value={{ theme, taggleTheme }}>
+      {Children}
+    </ThemeContext.Provider>
+  );
 };
 
 export default DarkLight;

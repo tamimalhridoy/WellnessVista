@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import DarkLight from "./mode/DarkLight";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <DarkLight>
+      <div>Home</div>
+    </DarkLight>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../mode/DarkLight";
 
 const Navbar = () => {
+  const { theme, taggleTheme } = useContext(ThemeContext);
+  // const [theme] = useState();
   return (
     <nav className="bg-slate-50 border-b-2 py-6">
       <div className="container">
