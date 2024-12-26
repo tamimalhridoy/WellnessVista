@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../mode/DarkLight";
 
 const Navbar = () => {
   const { theme, taggleTheme } = useContext(ThemeContext);
-  // const [theme] = useState();
+ 
   return (
     <nav className="bg-slate-50 border-b-2 py-6">
       <div className="container">
@@ -44,12 +44,15 @@ const Navbar = () => {
             </ul>
             <div className="flex items-center gap-8">
               <div className="flex">
-                <button className="text-3xl bg-slate-300 rounded-full w-8 h-8 flex justify-center items-center">
-                  <MdDarkMode />
-                </button>
-                <button className="text-3xl bg-slate-800 text-white rounded-full w-8 h-8 flex justify-center items-center">
-                  <MdLightMode />
-                </button>
+                {theme === "light" ? (
+                  <button className="text-3xl bg-slate-300 rounded-full w-8 h-8 flex justify-center items-center">
+                    <MdDarkMode />
+                  </button>
+                ) : (
+                  <button className="text-3xl bg-slate-800 text-white rounded-full w-8 h-8 flex justify-center items-center">
+                    <MdLightMode />
+                  </button>
+                )}
               </div>
               <div className="lg:flex hidden">
                 <button className="bg-[#dd8036] px-3 py-2 rounded-lg font-secondary">

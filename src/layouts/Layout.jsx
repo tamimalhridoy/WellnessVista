@@ -6,13 +6,13 @@ import DarkLight from "../mode/DarkLight";
 
 const Layout = () => {
   return (
-    <DarkLight>
-      <div>
+    <>
+      <DarkLight>
         <Navbar />
         <Outlet />
         <Fooder />
-      </div>
-    </DarkLight>
+      </DarkLight>
+    </>
   );
 };
 
